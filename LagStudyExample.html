@@ -14577,7 +14577,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">chainladder</span>
@@ -14637,9 +14637,6 @@ Using cached sparse-0.15.4-py2.py3-none-any.whl (237 kB)
 Using cached patsy-1.0.1-py2.py3-none-any.whl (232 kB)
 Using cached llvmlite-0.43.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.9 MB)
 Installing collected packages: patsy, llvmlite, numba, sparse, chainladder
-Successfully installed chainladder-0.8.23 llvmlite-0.43.0 numba-0.60.0 patsy-1.0.1 sparse-0.15.4
-<span class="ansi-yellow-fg">WARNING: Running pip as the &#39;root&#39; user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv</span><span class="ansi-yellow-fg">
-</span>Note: you may need to restart the kernel to use updated packages.
 </pre>
 </div>
 </div>
@@ -14653,7 +14650,7 @@ Successfully installed chainladder-0.8.23 llvmlite-0.43.0 numba-0.60.0 patsy-1.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">chainladder</span> <span class="k">as</span> <span class="nn">cl</span>
@@ -14671,13 +14668,11 @@ Successfully installed chainladder-0.8.23 llvmlite-0.43.0 numba-0.60.0 patsy-1.0
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">comauto</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">load_sample</span><span class="p">(</span><span class="s2">"clrd"</span><span class="p">)</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"LOB"</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s2">"comauto"</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">comauto</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">comauto</span><span class="p">[</span><span class="s2">"IncurLoss"</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">comauto</span><span class="p">[</span><span class="s2">"EarnedPremNet"</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">xyz</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">load_sample</span><span class="p">(</span><span class="s2">"xyz"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span>
 </pre></div>
 
      </div>
@@ -14699,34 +14694,18 @@ Successfully installed chainladder-0.8.23 llvmlite-0.43.0 numba-0.60.0 patsy-1.0
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>                                             Triangle Summary
-Valuation:                                            1997-12
-Grain:                                                   OYDY
-Shape:                                         (1, 6, 10, 10)
-Index:                                                  [LOB]
-Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
-           12        24        36        48        60        72        84        96        108       120
-1988  600839.0  632654.0  645663.0  646526.0  642177.0  639764.0  634631.0  631044.0  629857.0  629146.0
-1989  676688.0  694520.0  703946.0  704996.0  695533.0  689237.0  684654.0  681943.0  679999.0       NaN
-1990  741423.0  751063.0  748965.0  747312.0  743549.0  739173.0  732767.0  731394.0       NaN       NaN
-1991  757620.0  768456.0  766137.0  755428.0  749200.0  739830.0  735818.0       NaN       NaN       NaN
-1992  809703.0  811170.0  801484.0  784457.0  775180.0  772221.0       NaN       NaN       NaN       NaN
-1993  862399.0  846249.0  851380.0  837554.0  834085.0       NaN       NaN       NaN       NaN       NaN
-1994  934383.0  913211.0  912161.0  915216.0       NaN       NaN       NaN       NaN       NaN       NaN
-1995  958551.0  943200.0  928820.0       NaN       NaN       NaN       NaN       NaN       NaN       NaN
-1996  921853.0  904893.0       NaN       NaN       NaN       NaN       NaN       NaN       NaN       NaN
-1997  919646.0       NaN       NaN       NaN       NaN       NaN       NaN       NaN       NaN       NaN
-            12         24         36         48         60         72         84         96        108       120
-1988   913636.0   913636.0   913636.0   913636.0   913636.0   913636.0   913636.0   913636.0  913636.0  913636.0
-1989   964262.0   964262.0   964262.0   964262.0   964262.0   964262.0   964262.0   964262.0  964262.0       NaN
-1990  1054021.0  1054021.0  1054021.0  1054021.0  1054021.0  1054021.0  1054021.0  1054021.0       NaN       NaN
-1991  1122954.0  1122954.0  1122954.0  1122954.0  1122954.0  1122954.0  1122954.0        NaN       NaN       NaN
-1992  1170269.0  1170269.0  1170269.0  1170269.0  1170269.0  1170269.0        NaN        NaN       NaN       NaN
-1993  1213680.0  1213680.0  1213680.0  1213680.0  1213680.0        NaN        NaN        NaN       NaN       NaN
-1994  1309786.0  1309786.0  1309786.0  1309786.0        NaN        NaN        NaN        NaN       NaN       NaN
-1995  1336249.0  1336249.0  1336249.0        NaN        NaN        NaN        NaN        NaN       NaN       NaN
-1996  1358266.0  1358266.0        NaN        NaN        NaN        NaN        NaN        NaN       NaN       NaN
-1997  1369835.0        NaN        NaN        NaN        NaN        NaN        NaN        NaN       NaN       NaN
+<pre>         12       24       36       48       60       72       84       96       108      120      132
+1998     NaN      NaN   6309.0   8521.0  10082.0  11620.0  13242.0  14419.0  15311.0  15764.0  15822.0
+1999     NaN   4666.0   9861.0  13971.0  18127.0  22032.0  23511.0  24146.0  24592.0  24817.0      NaN
+2000  1302.0   6513.0  12139.0  17828.0  24030.0  28853.0  33222.0  35902.0  36782.0      NaN      NaN
+2001  1539.0   5952.0  12319.0  18609.0  24387.0  31090.0  37070.0  38519.0      NaN      NaN      NaN
+2002  2318.0   7932.0  13822.0  22095.0  31945.0  40629.0  44437.0      NaN      NaN      NaN      NaN
+2003  1743.0   6240.0  12683.0  22892.0  34505.0  39320.0      NaN      NaN      NaN      NaN      NaN
+2004  2221.0   9898.0  25950.0  43439.0  52811.0      NaN      NaN      NaN      NaN      NaN      NaN
+2005  3043.0  12219.0  27073.0  40026.0      NaN      NaN      NaN      NaN      NaN      NaN      NaN
+2006  3531.0  11778.0  22819.0      NaN      NaN      NaN      NaN      NaN      NaN      NaN      NaN
+2007  3529.0  11865.0      NaN      NaN      NaN      NaN      NaN      NaN      NaN      NaN      NaN
+2008  3409.0      NaN      NaN      NaN      NaN      NaN      NaN      NaN      NaN      NaN      NaN
 </pre>
 </div>
 </div>
@@ -14740,18 +14719,695 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Recreates the tab '1996'</span>
-<span class="n">comauto_1996</span> <span class="o">=</span> <span class="n">comauto</span><span class="p">[</span><span class="n">comauto</span><span class="o">.</span><span class="n">valuation</span><span class="o">.</span><span class="n">year</span> <span class="o">&lt;</span> <span class="mi">1997</span><span class="p">]</span>
-<span class="n">dev_1996</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span>
-    <span class="n">average</span> <span class="o">=</span> <span class="s2">"simple"</span><span class="p">,</span>
-    <span class="n">n_periods</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span><span class="n">n_periods</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span><span class="o">.</span><span class="n">ldf_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span><span class="n">n_periods</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span><span class="o">.</span><span class="n">ldf_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span><span class="n">n_periods</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span><span class="o">.</span><span class="n">ldf_</span><span class="p">)</span>
+<span class="n">development_estimator</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span><span class="n">n_periods</span><span class="o">=-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">development_estimator</span><span class="o">.</span><span class="n">ldf_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">development_estimator</span><span class="o">.</span><span class="n">cdf_</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>          12-24     24-36    36-48    48-60     60-72     72-84     84-96    96-108   108-120   120-132
+(All)  3.549639  2.237557  1.61868  1.34871  1.222398  1.140765  1.050787  1.029785  1.016991  1.003679
+          12-24     24-36     36-48     48-60     60-72     72-84   84-96    96-108   108-120   120-132
+(All)  3.696595  2.129257  1.601152  1.342896  1.217529  1.128576  1.0555  1.029785  1.016991  1.003679
+          12-24     24-36     36-48     48-60    60-72     72-84   84-96    96-108   108-120   120-132
+(All)  3.765578  2.096169  1.559481  1.329354  1.21295  1.128576  1.0555  1.029785  1.016991  1.003679
+          12-24     24-36     36-48     48-60    60-72     72-84   84-96    96-108   108-120   120-132
+(All)  3.765578  2.096169  1.559481  1.329354  1.21295  1.128576  1.0555  1.029785  1.016991  1.003679
+          12-Ult    24-Ult    36-Ult    48-Ult    60-Ult    72-Ult    84-Ult    96-Ult   108-Ult   120-Ult
+(All)  24.852455  6.599905  3.148556  2.018977  1.518765  1.252125  1.109474  1.051136  1.020733  1.003679
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unpaid_estimator</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">development_estimator</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unpaid_estimator</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span><span class="o">.</span><span class="n">ibnr_</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>              2261
+1998           NaN
+1999     91.308424
+2000    762.600768
+2001   1969.689315
+2002   4864.677116
+2003   9913.569537
+2004  27396.507281
+2005  40785.572480
+2006  49027.905096
+2007  66442.869629
+2008  81313.019619
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_1</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">GridSearch</span><span class="p">(</span>
+    <span class="n">estimator</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">(</span><span class="s1">'dev'</span><span class="p">,</span><span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s1">'model'</span><span class="p">,</span><span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">())]),</span>
+    <span class="n">param_grid</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">dev__n_periods</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+        <span class="n">dev__average</span><span class="o">=</span><span class="p">[</span><span class="s1">'simple'</span><span class="p">,</span><span class="s1">'volume'</span><span class="p">]),</span>
+    <span class="n">scoring</span><span class="o">=</span><span class="p">{</span><span class="s1">'IBNR'</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">named_steps</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ibnr_</span><span class="o">.</span><span class="n">sum</span><span class="p">()},</span>
+    <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">scenarios_1</span> <span class="o">=</span> <span class="n">grid_1</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">],</span><span class="n">sample_weight</span> <span class="o">=</span> <span class="n">xyz</span><span class="p">[</span><span class="s2">"Premium"</span><span class="p">]</span><span class="o">.</span><span class="n">latest_diagonal</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scenarios_1</span><span class="o">.</span><span class="n">results_</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>  dev__average  dev__n_periods           IBNR
+0       simple               3  334350.073145
+1       simple               4  322166.564146
+2       simple               5  308756.745266
+3       simple              -1  284720.726576
+4       volume               3  308289.665846
+5       volume               4  302911.156070
+6       volume               5  294692.017945
+7       volume              -1  282567.719265
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[39]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_1</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[39]:</div>
+
+
+
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html">
+<style>#sk-container-id-2 {
+  /* Definition of color scheme common for light and dark mode */
+  --sklearn-color-text: black;
+  --sklearn-color-line: gray;
+  /* Definition of color scheme for unfitted estimators */
+  --sklearn-color-unfitted-level-0: #fff5e6;
+  --sklearn-color-unfitted-level-1: #f6e4d2;
+  --sklearn-color-unfitted-level-2: #ffe0b3;
+  --sklearn-color-unfitted-level-3: chocolate;
+  /* Definition of color scheme for fitted estimators */
+  --sklearn-color-fitted-level-0: #f0f8ff;
+  --sklearn-color-fitted-level-1: #d4ebff;
+  --sklearn-color-fitted-level-2: #b3dbfd;
+  --sklearn-color-fitted-level-3: cornflowerblue;
+
+  /* Specific color for light theme */
+  --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, white)));
+  --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, black)));
+  --sklearn-color-icon: #696969;
+
+  @media (prefers-color-scheme: dark) {
+    /* Redefinition of color scheme for dark theme */
+    --sklearn-color-text-on-default-background: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-background: var(--sg-background-color, var(--theme-background, var(--jp-layout-color0, #111)));
+    --sklearn-color-border-box: var(--sg-text-color, var(--theme-code-foreground, var(--jp-content-font-color1, white)));
+    --sklearn-color-icon: #878787;
+  }
+}
+
+#sk-container-id-2 {
+  color: var(--sklearn-color-text);
+}
+
+#sk-container-id-2 pre {
+  padding: 0;
+}
+
+#sk-container-id-2 input.sk-hidden--visually {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#sk-container-id-2 div.sk-dashed-wrapped {
+  border: 1px dashed var(--sklearn-color-line);
+  margin: 0 0.4em 0.5em 0.4em;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  background-color: var(--sklearn-color-background);
+}
+
+#sk-container-id-2 div.sk-container {
+  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
+     but bootstrap.min.css set `[hidden] { display: none !important; }`
+     so we also need the `!important` here to be able to override the
+     default hidden behavior on the sphinx rendered scikit-learn.org.
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
+  display: inline-block !important;
+  position: relative;
+}
+
+#sk-container-id-2 div.sk-text-repr-fallback {
+  display: none;
+}
+
+div.sk-parallel-item,
+div.sk-serial,
+div.sk-item {
+  /* draw centered vertical line to link estimators */
+  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Parallel-specific style estimator block */
+
+#sk-container-id-2 div.sk-parallel-item::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
+  flex-grow: 1;
+}
+
+#sk-container-id-2 div.sk-parallel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--sklearn-color-background);
+  position: relative;
+}
+
+#sk-container-id-2 div.sk-parallel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+#sk-container-id-2 div.sk-parallel-item:first-child::after {
+  align-self: flex-end;
+  width: 50%;
+}
+
+#sk-container-id-2 div.sk-parallel-item:last-child::after {
+  align-self: flex-start;
+  width: 50%;
+}
+
+#sk-container-id-2 div.sk-parallel-item:only-child::after {
+  width: 0;
+}
+
+/* Serial-specific style estimator block */
+
+#sk-container-id-2 div.sk-serial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sklearn-color-background);
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
+clickable and can be expanded/collapsed.
+- Pipeline and ColumnTransformer use this feature and define the default style
+- Estimators will overwrite some part of the style using the `sk-estimator` class
+*/
+
+/* Pipeline and ColumnTransformer style (default) */
+
+#sk-container-id-2 div.sk-toggleable {
+  /* Default theme specific background. It is overwritten whether we have a
+  specific estimator or a Pipeline/ColumnTransformer */
+  background-color: var(--sklearn-color-background);
+}
+
+/* Toggleable label */
+#sk-container-id-2 label.sk-toggleable__label {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#sk-container-id-2 label.sk-toggleable__label-arrow:before {
+  /* Arrow on the left of the label */
+  content: "▸";
+  float: left;
+  margin-right: 0.25em;
+  color: var(--sklearn-color-icon);
+}
+
+#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {
+  color: var(--sklearn-color-text);
+}
+
+/* Toggleable content - dropdown */
+
+#sk-container-id-2 div.sk-toggleable__content {
+  max-height: 0;
+  max-width: 0;
+  overflow: hidden;
+  text-align: left;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-2 div.sk-toggleable__content.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-2 div.sk-toggleable__content pre {
+  margin: 0.2em;
+  border-radius: 0.25em;
+  color: var(--sklearn-color-text);
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-2 div.sk-toggleable__content.fitted pre {
+  /* unfitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+  /* Expand drop-down */
+  max-height: 200px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+  content: "▾";
+}
+
+/* Pipeline/ColumnTransformer-specific style */
+
+#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-2 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator-specific style */
+
+/* Colorize estimator box */
+#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-2 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+#sk-container-id-2 div.sk-label label.sk-toggleable__label,
+#sk-container-id-2 div.sk-label label {
+  /* The background is the default theme color */
+  color: var(--sklearn-color-text-on-default-background);
+}
+
+/* On hover, darken the color of the background */
+#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+/* Label box, darken color on hover, fitted */
+#sk-container-id-2 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator label */
+
+#sk-container-id-2 div.sk-label label {
+  font-family: monospace;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+#sk-container-id-2 div.sk-label-container {
+  text-align: center;
+}
+
+/* Estimator-specific */
+#sk-container-id-2 div.sk-estimator {
+  font-family: monospace;
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+#sk-container-id-2 div.sk-estimator.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+/* on hover */
+#sk-container-id-2 div.sk-estimator:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+#sk-container-id-2 div.sk-estimator.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Specification for estimator info (e.g. "i" and "?") */
+
+/* Common style for "i" and "?" */
+
+.sk-estimator-doc-link,
+a:link.sk-estimator-doc-link,
+a:visited.sk-estimator-doc-link {
+  float: right;
+  font-size: smaller;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1em;
+  height: 1em;
+  width: 1em;
+  text-decoration: none !important;
+  margin-left: 1ex;
+  /* unfitted */
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-1);
+}
+
+.sk-estimator-doc-link.fitted,
+a:link.sk-estimator-doc-link.fitted,
+a:visited.sk-estimator-doc-link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+div.sk-estimator:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover,
+div.sk-label-container:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover,
+div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+/* Span, style for the box shown on hovering the info icon */
+.sk-estimator-doc-link span {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  font-weight: normal;
+  right: .2ex;
+  padding: .5ex;
+  margin: .5ex;
+  width: min-content;
+  min-width: 20ex;
+  max-width: 50ex;
+  color: var(--sklearn-color-text);
+  box-shadow: 2pt 2pt 4pt #999;
+  /* unfitted */
+  background: var(--sklearn-color-unfitted-level-0);
+  border: .5pt solid var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted span {
+  /* fitted */
+  background: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-estimator-doc-link:hover span {
+  display: block;
+}
+
+/* "?"-specific style due to the `<a>` HTML tag */
+
+#sk-container-id-2 a.estimator_doc_link {
+  float: right;
+  font-size: 1rem;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-background);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  text-decoration: none;
+  /* unfitted */
+  color: var(--sklearn-color-unfitted-level-1);
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+}
+
+#sk-container-id-2 a.estimator_doc_link.fitted {
+  /* fitted */
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+#sk-container-id-2 a.estimator_doc_link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+#sk-container-id-2 a.estimator_doc_link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+}
+</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GridSearch(estimator=Pipeline(steps=[(&#x27;dev&#x27;, Development()),
+                                     (&#x27;model&#x27;, Chainladder())]),
+           n_jobs=-1,
+           param_grid={&#x27;dev__average&#x27;: [&#x27;simple&#x27;, &#x27;volume&#x27;],
+                       &#x27;dev__n_periods&#x27;: [3, 4, 5, -1]},
+           scoring={&#x27;IBNR&#x27;: &lt;function &lt;lambda&gt; at 0x7f2c0774c680&gt;})</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item sk-dashed-wrapped"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-6" type="checkbox" ><label for="sk-estimator-id-6" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;GridSearch<span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>GridSearch(estimator=Pipeline(steps=[(&#x27;dev&#x27;, Development()),
+                                     (&#x27;model&#x27;, Chainladder())]),
+           n_jobs=-1,
+           param_grid={&#x27;dev__average&#x27;: [&#x27;simple&#x27;, &#x27;volume&#x27;],
+                       &#x27;dev__n_periods&#x27;: [3, 4, 5, -1]},
+           scoring={&#x27;IBNR&#x27;: &lt;function &lt;lambda&gt; at 0x7f2c0774c680&gt;})</pre></div> </div></div><div class="sk-parallel"><div class="sk-parallel-item"><div class="sk-item"><div class="sk-label-container"><div class="sk-label fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-7" type="checkbox" ><label for="sk-estimator-id-7" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">estimator: Pipeline</label><div class="sk-toggleable__content fitted"><pre>Pipeline(steps=[(&#x27;dev&#x27;, Development()), (&#x27;model&#x27;, Chainladder())])</pre></div> </div></div><div class="sk-serial"><div class="sk-item"><div class="sk-serial"><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-8" type="checkbox" ><label for="sk-estimator-id-8" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">Development</label><div class="sk-toggleable__content fitted"><pre>Development()</pre></div> </div></div><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-9" type="checkbox" ><label for="sk-estimator-id-9" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">Chainladder</label><div class="sk-toggleable__content fitted"><pre>Chainladder()</pre></div> </div></div></div></div></div></div></div></div></div></div></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">grid_2</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">GridSearch</span><span class="p">(</span>
+    <span class="n">estimator</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Pipeline</span><span class="p">(</span><span class="n">steps</span><span class="o">=</span><span class="p">[</span>
+        <span class="p">(</span><span class="s1">'dev'</span><span class="p">,</span><span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s1">'tail'</span><span class="p">,</span><span class="n">cl</span><span class="o">.</span><span class="n">TailCurve</span><span class="p">()),</span>
+        <span class="p">(</span><span class="s1">'model'</span><span class="p">,</span><span class="n">cl</span><span class="o">.</span><span class="n">Benktander</span><span class="p">())]),</span>
+    <span class="n">param_grid</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span>
+        <span class="n">model__n_iters</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">)),</span>
+        <span class="n">model__apriori</span> <span class="o">=</span><span class="p">[</span><span class="mf">.5</span><span class="p">,</span><span class="mf">.75</span><span class="p">,</span><span class="mi">1</span><span class="p">]),</span>
+    <span class="n">scoring</span><span class="o">=</span><span class="p">{</span><span class="s1">'IBNR'</span><span class="p">:</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">named_steps</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">ibnr_</span><span class="o">.</span><span class="n">sum</span><span class="p">()},</span>
+    <span class="n">n_jobs</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">scenarios_2</span> <span class="o">=</span> <span class="n">grid_2</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span> <span class="o">=</span> <span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">],</span><span class="n">sample_weight</span> <span class="o">=</span> <span class="n">xyz</span><span class="p">[</span><span class="s2">"Premium"</span><span class="p">]</span><span class="o">.</span><span class="n">latest_diagonal</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">scenarios_2</span><span class="o">.</span><span class="n">results_</span><span class="p">)</span>
+</pre></div>
+
+     </div>
+</div>
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>     model__apriori  model__n_iters           IBNR
+0               0.5               1  151204.465974
+1               0.5               3  194348.539126
+2               0.5               5  212388.626471
+3               0.5               7  224115.018734
+4               0.5               9  232758.028452
+..              ...             ...            ...
+145             1.0              91  286028.417231
+146             1.0              93  286100.336924
+147             1.0              95  286166.624390
+148             1.0              97  286227.720771
+149             1.0              99  286284.032636
+
+[150 rows x 3 columns]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+     <div class="CodeMirror cm-s-jupyter">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Recreates the tab '2007'</span>
+<span class="n">xyz_07</span> <span class="o">=</span> <span class="n">xyz</span><span class="p">[</span><span class="n">xyz</span><span class="o">.</span><span class="n">valuation</span><span class="o">.</span><span class="n">year</span> <span class="o">&lt;</span> <span class="mi">2008</span><span class="p">]</span>
+<span class="n">dev_07</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span>
+    <span class="n">n_periods</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">*</span> <span class="mi">7</span>
     <span class="p">)</span>
-<span class="n">cl_1996</span> <span class="o">=</span> <span class="n">dev_1996</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">comauto_1996</span><span class="p">[</span><span class="s2">"IncurLoss"</span><span class="p">])</span>
-<span class="n">ult_1996</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cl_1996</span><span class="p">)</span>
-<span class="n">ult_1996</span><span class="o">.</span><span class="n">ultimate_</span>
+<span class="n">cl_07</span> <span class="o">=</span> <span class="n">dev_2007</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">xyz_07</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span>
+<span class="n">ult_07</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cl_07</span><span class="p">)</span>
+<span class="n">ult_07</span><span class="o">.</span><span class="n">ultimate_</span>
 </pre></div>
 
      </div>
@@ -14769,7 +15425,7 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[18]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
 
 
 
@@ -14783,40 +15439,44 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
   </thead>
   <tbody>
     <tr>
-      <th>1988</th>
-      <td>629,857</td>
+      <th>1998</th>
+      <td>15,764</td>
     </tr>
     <tr>
-      <th>1989</th>
-      <td>680,660</td>
+      <th>1999</th>
+      <td>25,320</td>
     </tr>
     <tr>
-      <th>1990</th>
-      <td>727,874</td>
+      <th>2000</th>
+      <td>38,247</td>
     </tr>
     <tr>
-      <th>1991</th>
-      <td>729,172</td>
+      <th>2001</th>
+      <td>42,026</td>
     </tr>
     <tr>
-      <th>1992</th>
-      <td>758,053</td>
+      <th>2002</th>
+      <td>52,680</td>
     </tr>
     <tr>
-      <th>1993</th>
-      <td>811,160</td>
+      <th>2003</th>
+      <td>55,311</td>
     </tr>
     <tr>
-      <th>1994</th>
-      <td>871,563</td>
+      <th>2004</th>
+      <td>95,872</td>
     </tr>
     <tr>
-      <th>1995</th>
-      <td>898,957</td>
+      <th>2005</th>
+      <td>94,589</td>
     </tr>
     <tr>
-      <th>1996</th>
-      <td>861,801</td>
+      <th>2006</th>
+      <td>95,350</td>
+    </tr>
+    <tr>
+      <th>2007</th>
+      <td>110,104</td>
     </tr>
   </tbody>
 </table>
@@ -14833,12 +15493,12 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Recreates the tab '1997_using_1996_Factor_Values'</span>
-<span class="n">ult_1997_using_1996_Factor_Values</span> <span class="o">=</span> <span class="n">ult_1996</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">comauto</span><span class="p">[</span><span class="s2">"IncurLoss"</span><span class="p">])</span>
-<span class="n">ult_1997_using_1996_Factor_Values</span><span class="o">.</span><span class="n">ultimate_</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Recreates the tab '2008 w 2007 LDF'</span>
+<span class="n">ult_08_w_07_LDF</span> <span class="o">=</span> <span class="n">ult_2007</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span>
+<span class="n">ult_08_w_07_LDF</span><span class="o">.</span><span class="n">ultimate_</span>
 </pre></div>
 
      </div>
@@ -14856,7 +15516,7 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[19]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[14]:</div>
 
 
 
@@ -14870,44 +15530,48 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
   </thead>
   <tbody>
     <tr>
-      <th>1988</th>
-      <td>629,146</td>
+      <th>1998</th>
+      <td>15,822</td>
     </tr>
     <tr>
-      <th>1989</th>
-      <td>679,999</td>
+      <th>1999</th>
+      <td>24,817</td>
     </tr>
     <tr>
-      <th>1990</th>
-      <td>730,018</td>
+      <th>2000</th>
+      <td>37,870</td>
     </tr>
     <tr>
-      <th>1991</th>
-      <td>730,904</td>
+      <th>2001</th>
+      <td>41,035</td>
     </tr>
     <tr>
-      <th>1992</th>
-      <td>761,097</td>
+      <th>2002</th>
+      <td>50,378</td>
     </tr>
     <tr>
-      <th>1993</th>
-      <td>815,657</td>
+      <th>2003</th>
+      <td>50,983</td>
     </tr>
     <tr>
-      <th>1994</th>
-      <td>886,375</td>
+      <th>2004</th>
+      <td>84,655</td>
     </tr>
     <tr>
-      <th>1995</th>
-      <td>887,481</td>
+      <th>2005</th>
+      <td>88,339</td>
     </tr>
     <tr>
-      <th>1996</th>
-      <td>862,447</td>
+      <th>2006</th>
+      <td>79,726</td>
     </tr>
     <tr>
-      <th>1997</th>
-      <td>859,738</td>
+      <th>2007</th>
+      <td>96,054</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>106,360</td>
     </tr>
   </tbody>
 </table>
@@ -14924,16 +15588,16 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Recreates the tab '1997_Using_1996_Factor_Sel'</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Recreates the tab '2008 w 2007 Sel'</span>
 <span class="kn">import</span> <span class="nn">copy</span> <span class="k">as</span> <span class="nn">cp</span>
-<span class="n">dev_1996_sel</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">dev_1996</span><span class="p">)</span>
-<span class="n">dev_1996_sel</span><span class="o">.</span><span class="n">n_periods</span> <span class="o">=</span> <span class="n">dev_1996_sel</span><span class="o">.</span><span class="n">n_periods</span> <span class="o">+</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">cl_1996_sel</span> <span class="o">=</span> <span class="n">dev_1996_sel</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">comauto</span><span class="p">[</span><span class="s2">"IncurLoss"</span><span class="p">])</span>
-<span class="n">ult_1996_sel</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cl_1996_sel</span><span class="p">)</span>
-<span class="n">ult_1996_sel</span><span class="o">.</span><span class="n">ultimate_</span>
+<span class="n">dev_07_sel</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">dev_07</span><span class="p">)</span>
+<span class="n">dev_07_sel</span><span class="o">.</span><span class="n">n_periods</span> <span class="o">=</span> <span class="n">dev_07_sel</span><span class="o">.</span><span class="n">n_periods</span> <span class="o">+</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">cl_07_sel</span> <span class="o">=</span> <span class="n">dev_07_sel</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span>
+<span class="n">ult_07_sel</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cl_07_sel</span><span class="p">)</span>
+<span class="n">ult_07_sel</span><span class="o">.</span><span class="n">ultimate_</span>
 </pre></div>
 
      </div>
@@ -14951,7 +15615,7 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[16]:</div>
 
 
 
@@ -14965,44 +15629,48 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
   </thead>
   <tbody>
     <tr>
-      <th>1988</th>
-      <td>629,146</td>
+      <th>1998</th>
+      <td>15,822</td>
     </tr>
     <tr>
-      <th>1989</th>
-      <td>679,231</td>
+      <th>1999</th>
+      <td>24,908</td>
     </tr>
     <tr>
-      <th>1990</th>
-      <td>728,840</td>
+      <th>2000</th>
+      <td>37,545</td>
     </tr>
     <tr>
-      <th>1991</th>
-      <td>730,441</td>
+      <th>2001</th>
+      <td>40,489</td>
     </tr>
     <tr>
-      <th>1992</th>
-      <td>761,066</td>
+      <th>2002</th>
+      <td>49,302</td>
     </tr>
     <tr>
-      <th>1993</th>
-      <td>815,612</td>
+      <th>2003</th>
+      <td>49,234</td>
     </tr>
     <tr>
-      <th>1994</th>
-      <td>888,403</td>
+      <th>2004</th>
+      <td>80,208</td>
     </tr>
     <tr>
-      <th>1995</th>
-      <td>890,763</td>
+      <th>2005</th>
+      <td>80,812</td>
     </tr>
     <tr>
-      <th>1996</th>
-      <td>862,984</td>
+      <th>2006</th>
+      <td>71,847</td>
     </tr>
     <tr>
-      <th>1997</th>
-      <td>860,369</td>
+      <th>2007</th>
+      <td>83,590</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>85,250</td>
     </tr>
   </tbody>
 </table>
@@ -15019,16 +15687,15 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">##Recreates the tab '1997'</span>
-<span class="n">cl_1997</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span>
-    <span class="n">average</span> <span class="o">=</span> <span class="s2">"simple"</span><span class="p">,</span>
-    <span class="n">n_periods</span> <span class="o">=</span> <span class="mi">4</span>
-    <span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">comauto</span><span class="p">[</span><span class="s2">"IncurLoss"</span><span class="p">])</span>
-<span class="n">ult_1997</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">comauto</span><span class="p">[</span><span class="s2">"IncurLoss"</span><span class="p">])</span>
-<span class="n">ult_1997</span><span class="o">.</span><span class="n">ultimate_</span>
+<span class="n">cl_08</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Development</span><span class="p">(</span>
+    <span class="n">n_periods</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">xyz</span><span class="p">[</span><span class="s2">"Paid"</span><span class="p">])</span>
+<span class="n">ult_08</span> <span class="o">=</span> <span class="n">cl</span><span class="o">.</span><span class="n">Chainladder</span><span class="p">()</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">cl_08</span><span class="p">)</span>
+<span class="n">ult_08</span><span class="o">.</span><span class="n">ultimate_</span>
 </pre></div>
 
      </div>
@@ -15046,7 +15713,7 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[8]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[17]:</div>
 
 
 
@@ -15060,44 +15727,48 @@ Columns:    [IncurLoss, CumPaidLoss, BulkLoss, EarnedPremD...
   </thead>
   <tbody>
     <tr>
-      <th>1988</th>
-      <td>629,146</td>
+      <th>1998</th>
+      <td>15,822</td>
     </tr>
     <tr>
-      <th>1989</th>
-      <td>679,231</td>
+      <th>1999</th>
+      <td>24,908</td>
     </tr>
     <tr>
-      <th>1990</th>
-      <td>728,826</td>
+      <th>2000</th>
+      <td>37,545</td>
     </tr>
     <tr>
-      <th>1991</th>
-      <td>730,494</td>
+      <th>2001</th>
+      <td>40,489</td>
     </tr>
     <tr>
-      <th>1992</th>
-      <td>761,136</td>
+      <th>2002</th>
+      <td>49,302</td>
     </tr>
     <tr>
-      <th>1993</th>
-      <td>816,318</td>
+      <th>2003</th>
+      <td>49,234</td>
     </tr>
     <tr>
-      <th>1994</th>
-      <td>888,407</td>
+      <th>2004</th>
+      <td>80,208</td>
     </tr>
     <tr>
-      <th>1995</th>
-      <td>895,262</td>
+      <th>2005</th>
+      <td>80,812</td>
     </tr>
     <tr>
-      <th>1996</th>
-      <td>871,929</td>
+      <th>2006</th>
+      <td>71,847</td>
     </tr>
     <tr>
-      <th>1997</th>
-      <td>886,384</td>
+      <th>2007</th>
+      <td>78,308</td>
+    </tr>
+    <tr>
+      <th>2008</th>
+      <td>84,722</td>
     </tr>
   </tbody>
 </table>
